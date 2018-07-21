@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<header>
+	<header class="container">
 		<h1><?php bloginfo( 'name' ); ?></h1>
 	</header>
 	

@@ -1,7 +1,12 @@
 <?php 
 
 	function notes_files() {
-		wp_enqueue_style( 'notes-styles', get_theme_file_uri( '/style.css' ), NULL, '0.1' );
+		wp_enqueue_style( 'site-styles', get_theme_file_uri( '/style.css' ), NULL, '0.1' );
+		wp_enqueue_script( 'site-scripts', get_theme_file_uri( '/js/scripts-dist.js' ), NULL, 1.0, true );
+		wp_localize_script( 'site-scripts', 'siteData', array(
+			'rootURL' => get_site_url(),
+			'nonce' => wp_create_nonce( 'wp_rest' )
+		) );
 	}
 	add_action( 'wp_enqueue_scripts', 'notes_files' );
 
@@ -11,12 +16,14 @@
 			'supports' => array( 'title', 'editor' ),
 			'menu_icon' => 'dashicons-welcome-write-blog',
 			'show_ui' => true,
+			'show_in_rest' => true,
+			'public' => false,
 			'labels' => array(
 				'name' => 'Notes',
 				'add_new_item' => 'Add Note',
 				'edit_item' => 'Edit Note',
-				'all_item' => 'All Notes',
-				'singular' => 'Note'
+				'all_items' => 'All Notes',
+				'singular_name' => 'Note'
 			)
 		) );
 	}
