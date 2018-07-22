@@ -1,8 +1,8 @@
 /* === Libraries === */
-//@prepros-prepend "libraries/jquery.js"
+import $ from "jquery";
 
 /* === Modules/Classes === */
-//@prepros-prepend "modules/Notes.js"
+import Notes from "./modules/Notes";
 
 /* === Instantiate a new object using modules/classes === */
 const notes = new Notes();

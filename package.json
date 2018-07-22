@@ -1,0 +1,38 @@
+{
+  "name": "wp-notes",
+  "version": "1.0.0",
+  "description": "A note taking app built using WP REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsaicharan/wp-notes.git"
+  },
+  "keywords": [
+    "WP-Notes",
+    "WordPress",
+    "REST API",
+    "App",
+    "Note"
+  ],
+  "author": "Sai Charan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsaicharan/wp-notes/issues"
+  },
+  "homepage": "https://github.com/nsaicharan/wp-notes#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "babel-loader": "^8.0.0-beta.4",
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "webpack": "^4.16.1"
+  }
+}

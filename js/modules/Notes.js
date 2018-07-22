@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 class Notes {
   constructor() {
     this.events();
@@ -35,3 +37,5 @@ class Notes {
     });
   }
 }
+
+export default Notes;

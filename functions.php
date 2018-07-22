@@ -1,8 +1,8 @@
 <?php 
 
 	function notes_files() {
-		wp_enqueue_style( 'site-styles', get_theme_file_uri( '/style.css' ), NULL, '0.1' );
-		wp_enqueue_script( 'site-scripts', get_theme_file_uri( '/js/scripts-dist.js' ), NULL, 1.0, true );
+		wp_enqueue_style( 'site-styles', get_stylesheet_uri(), NULL, '0.1' );
+		wp_enqueue_script( 'site-scripts', get_theme_file_uri( '/js/scripts-bundled.js' ), NULL, microtime(), true );
 		wp_localize_script( 'site-scripts', 'siteData', array(
 			'rootURL' => get_site_url(),
 			'nonce' => wp_create_nonce( 'wp_rest' )
