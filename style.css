@@ -73,3 +73,15 @@ body {
     font-size: 1.7rem; }
   .btn:hover {
     filter: brightness(105%); }
+
+.notes-list {
+  list-style: none;
+  padding-left: 0; }
+  .notes-list__item {
+    margin-bottom: 3rem; }
+  .notes-list__title {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    display: block; }
+  .notes-list__content {
+    font-size: 1.6rem; }
