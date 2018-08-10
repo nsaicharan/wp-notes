@@ -6,7 +6,7 @@ class Notes {
   }
 
   events() {
-    $("#new-note-form").submit(this.createNote);
+    $("#new-note-form").submit(this.createNote.bind(this));
   }
 
   /* === METHODS === */
@@ -30,6 +30,17 @@ class Notes {
       data: newPostData,
       success: res => {
         console.log(res);
+
+        // Add new note to list
+        $(`<li class="notes-list__item">
+            <a href="${res.link}" class="notes-list__title">
+              ${res.title.raw}
+            </a>
+            <p class="notes-list__content">${res.content.raw}</p>
+          </li>`)
+          .prependTo(".notes-list")
+          .hide()
+          .slideDown();
       },
       error: err => {
         console.log(err);
