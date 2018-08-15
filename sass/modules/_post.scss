@@ -1,0 +1,16 @@
+.post {
+  &__title {
+    font-size: 3.2rem;
+  }
+
+  &__meta {
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    color: $color-grey-dark;
+  }
+
+  &__content {
+    line-height: 1.7;
+    font-size: 1.8rem;
+  }
+}

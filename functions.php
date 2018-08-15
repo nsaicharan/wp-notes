@@ -17,7 +17,7 @@
 			'menu_icon' => 'dashicons-welcome-write-blog',
 			'show_ui' => true,
 			'show_in_rest' => true,
-			'public' => false,
+			'public' => true,
 			'labels' => array(
 				'name' => 'Notes',
 				'add_new_item' => 'Add Note',
