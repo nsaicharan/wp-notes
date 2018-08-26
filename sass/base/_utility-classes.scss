@@ -24,3 +24,11 @@
 .hide {
   display: none;
 }
+
+.section-break {
+  max-width: 25rem;
+  margin: 4rem auto;
+  height: 2px;
+  background-color: $color-grey-light;
+  border: transparent;
+}

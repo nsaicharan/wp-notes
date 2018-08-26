@@ -13,6 +13,12 @@
                 <?php the_content(); ?>
             </div>
         </article>
+
+        <hr class="section-break">
+
+        <div class="comments">
+            <?php comments_template(); ?>
+        </div>
     </div>
 <?php endwhile; ?>
 

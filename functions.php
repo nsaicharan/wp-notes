@@ -13,7 +13,7 @@
 	// Notes Post Type
 	function notes_post() {
 		register_post_type( 'note', array(
-			'supports' => array( 'title', 'editor' ),
+			'supports' => array( 'title', 'editor', 'comments' ),
 			'menu_icon' => 'dashicons-welcome-write-blog',
 			'show_ui' => true,
 			'show_in_rest' => true,
