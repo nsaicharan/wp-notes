@@ -16,9 +16,7 @@
 
         <hr class="section-break">
 
-        <div class="comments">
-            <?php comments_template(); ?>
-        </div>
+        <?php comments_template(); ?>
     </div>
 <?php endwhile; ?>
 

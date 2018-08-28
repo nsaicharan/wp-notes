@@ -1,3 +1,5 @@
+<div class="comments">
+
 <?php 
 
 comment_form( array(
@@ -27,7 +29,7 @@ comment_form( array(
             </div>'
     ),
 
-    'class_submit' => 'btn'
+    'class_submit' => 'btn mb-sm'
 ));
 
 
@@ -35,9 +37,9 @@ if ( have_comments() ) :
 
 ?>
     
-    <h3>Discussion</h3>
+    <h3 class="headline headline--sm">Discussion</h3>
    
-    <ul>
+    <ul class="comments__list">
         <?php
             wp_list_comments( array(
                 'short_ping'  => true,
@@ -48,3 +50,5 @@ if ( have_comments() ) :
 
 <?php endif; //have_comments(); ?>
 
+</div> 
+<!-- ./comments -->
