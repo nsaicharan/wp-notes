@@ -10,6 +10,21 @@
 <body>
 
 	<header class="container">
-		<h1><?php bloginfo( 'name' ); ?></h1>
+		<nav class="site-nav">
+			<h1><a class="site-nav__logo" href="<?php echo site_url('/'); ?>">NOTES</a></h1>
+
+			<div>
+				<?php if ( is_user_logged_in() ) :  ?>
+				<a class="btn btn--sm btn--secondary site-nav__link" href="<?php echo site_url('/my-notes'); ?>">My Notes</a>
+				<a class="btn btn--sm btn--danger site-nav__link" href="<?php echo wp_logout_url(); ?>">Logout</a>
+				
+				<?php else : ?>
+				
+				<a class="btn btn--sm btn--secondary site-nav__link" href="<?php echo wp_login_url(); ?>">Login</a>
+				<a class="btn btn--sm btn--danger site-nav__link" href="<?php echo wp_registration_url(); ?>">Sign Up</a>
+				
+				<?php endif ?>
+			</div>
+		</nav>
 	</header>
 	

@@ -70,6 +70,14 @@ p {
   .headline--sm {
     font-size: 2.2rem; }
 
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 0; }
+  .site-nav__link {
+    margin-left: 1.5rem; }
+
 .input, .textarea {
   display: block;
   width: 100%;
@@ -96,17 +104,27 @@ p {
   background: #4f5ec9;
   color: #fff;
   border-color: transparent;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   font-family: inherit;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   transition: 0.15s ease-out; }
+  .btn--sm {
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem; }
   .btn--lg {
     padding: 1.5rem 2.5rem;
     font-size: 1.7rem; }
+  .btn--secondary {
+    background: #ffc35d; }
+  .btn--success {
+    background: #23d140; }
+  .btn--danger {
+    background: #ff6a6f; }
   .btn:hover {
     filter: brightness(105%); }
 

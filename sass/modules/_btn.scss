@@ -3,18 +3,36 @@
   background: $color-primary;
   color: $color-white;
   border-color: transparent;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   font-family: inherit;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   transition: 0.15s ease-out;
+
+  &--sm {
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+  }
 
   &--lg {
     padding: 1.5rem 2.5rem;
     font-size: 1.7rem;
+  }
+
+  &--secondary {
+    background: $color-secondary;
+  }
+
+  &--success {
+    background: $color-success;
+  }
+
+  &--danger {
+    background: $color-danger;
   }
 
   &:hover {

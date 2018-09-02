@@ -1,0 +1,10 @@
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 0;
+
+  &__link {
+    margin-left: 1.5rem;
+  }
+}
