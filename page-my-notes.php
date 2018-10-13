@@ -6,7 +6,7 @@
 
         <input type="text" class="input" id="new-note-title" placeholder="Title">
 
-        <textarea class="input input--textarea" id="new-note-body" placeholder="Your note here..."></textarea>
+        <textarea class="textarea" id="new-note-body" placeholder="Your note here..."></textarea>
 
         <button class="btn">Create Note</button>
     </form>
@@ -28,12 +28,17 @@
             while( $notesQuery->have_posts() ) : $notesQuery->the_post(); 
         ?>
 
-        <li class="notes-list__item">
-            <a href="<?php the_permalink(); ?>" class="notes-list__title">
+        <li class="note" data-note-id="<?php echo the_ID() ?>">
+            <a href="<?php the_permalink(); ?>" class="note__title">
                 <?php echo get_the_title(); ?>
             </a>
 
-            <p class="notes-list__content"><?php echo get_the_content(); ?></p>
+            <div class="note__options">
+                <a href="#" class="js-delete-note btn btn--icon btn--danger mr-sm" title="Delete">X</a>
+                <a href="#" class="js-edit-note btn btn--icon btn--secondary" title="Edit">E</a>
+            </div>
+
+            <p class="note__content"><?php echo get_the_content(); ?></p>
         </li>
 
         <?php endwhile; ?>

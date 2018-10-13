@@ -54,6 +54,13 @@ p {
 .mb-sm {
   margin-bottom: 1.6rem; }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto; }
+
+.mr-sm {
+  margin-right: 1rem; }
+
 .hide {
   display: none; }
 
@@ -100,6 +107,7 @@ p {
   font-weight: 700; }
 
 .btn {
+  display: inline-block;
   padding: 1rem 2rem;
   background: #4f5ec9;
   color: #fff;
@@ -113,6 +121,9 @@ p {
   text-decoration: none;
   cursor: pointer;
   transition: 0.15s ease-out; }
+  .btn--icon {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem; }
   .btn--sm {
     padding: 1rem 1.5rem;
     font-size: 1.4rem; }
@@ -131,13 +142,19 @@ p {
 .notes-list {
   list-style: none;
   padding-left: 0; }
-  .notes-list__item {
-    margin-bottom: 3rem; }
-  .notes-list__title {
+
+.note {
+  margin-bottom: 3.5rem; }
+  .note__options {
+    margin-bottom: 2.5rem; }
+  .note__title {
+    display: block;
+    margin-bottom: 1rem;
     font-size: 2.4rem;
-    margin-bottom: 1.5rem;
-    display: block; }
-  .notes-list__content {
+    text-decoration: none; }
+    .note__title:hover {
+      text-decoration: underline; }
+  .note__content {
     font-size: 1.6rem; }
 
 .post__title {

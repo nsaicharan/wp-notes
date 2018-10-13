@@ -1,15 +1,24 @@
 .notes-list {
   list-style: none;
   padding-left: 0;
+}
 
-  &__item {
-    margin-bottom: 3rem;
+.note {
+  margin-bottom: 3.5rem;
+
+  &__options {
+    margin-bottom: 2.5rem;
   }
 
   &__title {
-    font-size: 2.4rem;
-    margin-bottom: 1.5rem;
     display: block;
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__content {

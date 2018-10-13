@@ -1,7 +1,8 @@
 <?php 
 
+	// Used microtime() to avoid cache. Remove it on production site.
 	function notes_files() {
-		wp_enqueue_style( 'site-styles', get_stylesheet_uri(), NULL, '0.1' );
+		wp_enqueue_style( 'site-styles', get_stylesheet_uri(), NULL, microtime() );
 		wp_enqueue_script( 'site-scripts', get_theme_file_uri( '/js/scripts-bundled.js' ), NULL, microtime(), true );
 		wp_localize_script( 'site-scripts', 'siteData', array(
 			'rootURL' => get_site_url(),
